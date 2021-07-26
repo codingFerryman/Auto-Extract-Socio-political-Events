@@ -12,7 +12,7 @@ from transformers import BigBirdTokenizer, BigBirdConfig, BigBirdForTokenClassif
 from transformers import DebertaV2Tokenizer, DebertaV2ForSequenceClassification, DebertaV2Config
 from transformers import RobertaTokenizer, RobertaForTokenClassification, RobertaConfig
 
-from subtask3.conlleval import evaluate_conll_file
+from conlleval import evaluate_conll_file
 
 
 class SequenceClassificationDataset(Dataset):

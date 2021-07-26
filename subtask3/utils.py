@@ -1,7 +1,9 @@
-from stanza.utils.conll import CoNLL
 import stanza
+from stanza.utils.conll import CoNLL
+
 stanza.download('en')
 nlp_stanza = stanza.Pipeline('en')
+
 
 def sent_to_conll10(sentences: list) -> str:
     result = ''
