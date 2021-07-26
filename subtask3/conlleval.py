@@ -34,6 +34,7 @@ from __future__ import division, print_function, unicode_literals
 import sys
 from collections import defaultdict
 
+
 def split_tag(chunk_tag):
     """
     split chunk tag into IOBES prefix and chunk_type

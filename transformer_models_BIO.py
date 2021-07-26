@@ -1,31 +1,28 @@
-import json
-import random
 import argparse
-from sklearn.metrics import precision_recall_fscore_support, classification_report
-
-from sklearn.feature_extraction.text import TfidfVectorizer
-
-from sklearn.model_selection import train_test_split
-
-from sklearn.linear_model import SGDClassifier
-from transformers import RobertaTokenizer, RobertaForSequenceClassification, RobertaForTokenClassification, RobertaConfig
-from transformers import BigBirdTokenizer, BigBirdForSequenceClassification, BigBirdConfig, BigBirdForTokenClassification
-import torch
 import os
+import random
+import sys
+
+import torch
+from sklearn.metrics import precision_recall_fscore_support
 from torch.utils.data import Dataset, DataLoader
-from transformers import AdamW, get_linear_schedule_with_warmup
 from tqdm import tqdm
+from transformers import AdamW, get_linear_schedule_with_warmup
+from transformers import BigBirdTokenizer, BigBirdConfig, BigBirdForTokenClassification
+from transformers import DebertaV2Tokenizer, DebertaV2ForSequenceClassification, DebertaV2Config
+from transformers import RobertaTokenizer, RobertaForTokenClassification, RobertaConfig
 
-from conlleval import evaluate_conll_file
+from subtask3.conlleval import evaluate_conll_file
 
-from transformers import DebertaV2Tokenizer, DebertaV2Model, DebertaV2ForSequenceClassification, DebertaV2Config
 
 class SequenceClassificationDataset(Dataset):
 	def __init__(self, examples, tokenizer):
 		self.examples = examples
 		self.tokenizer = tokenizer
 		self.device = "cuda" if torch.cuda.is_available() else "cpu"
-		self.labels = ["B-etime", "B-fname", "B-organizer", "B-participant", "B-place", "B-target", "B-trigger", "I-etime", "I-fname", "I-organizer", "I-participant", "I-place", "I-target", "I-trigger", "O", "PAD"]
+		self.labels = ["B-etime", "B-fname", "B-organizer", "B-participant", "B-place", "B-target", "B-trigger",
+		               "I-etime", "I-fname", "I-organizer", "I-participant", "I-place", "I-target", "I-trigger", "O",
+		               "PAD"]
 		self.label2id = {j:i for i,j in enumerate(self.labels)}
 		self.id2label = {i:j for i,j in enumerate(self.labels)}
 

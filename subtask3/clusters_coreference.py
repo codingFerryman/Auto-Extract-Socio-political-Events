@@ -1,13 +1,13 @@
-import json
-import itertools
 import argparse
+import itertools
+import json
 import subprocess
-
-import numpy as np
-from allennlp.predictors.predictor import Predictor
-import pandas as pd
 from collections import Counter
 from typing import List
+
+import numpy as np
+import pandas as pd
+from allennlp.predictors.predictor import Predictor
 from icecream import ic
 from tqdm import tqdm
 
@@ -248,9 +248,9 @@ def main(train_file, prediction_output_file, test_file=None, submission_file=Non
 ic.disable()
 # args = parse()
 # main(args.train_file, args.prediction_output_file, args.test_file)
-train_file = "./data/subtask3-coreference/en-train.json"
+train_file = "../data/subtask3-coreference/en-train.json"
 prediction_output_file = "outputs/subtask3-predictions-OneCluster.json"
-test_file = "./test_subtask3.json"
+test_file = "../data/test/test_subtask3.json"
 submission_file = "outputs/subtask3-submission-OneCluster.json"
 # main(train_file, prediction_output_file, test_file, submission_file)
 train_data = read(train_file)
