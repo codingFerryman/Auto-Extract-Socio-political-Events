@@ -1,21 +1,519 @@
-{"event_clusters":[[1,2]],"sentence_no":[1,2],"sentences":["11\/02\/2003 - 04h25 Em protesto contra demissões , fiscais da CET evitam aplicar multas da Folha de S.Paulo Os marronzinhos da CET ( Companhia de Engenharia de Tráfego ) de São Paulo realizam desde a última quinta-feira uma `` operação padrão '' , evitando aplicar multas de trânsito , em protesto contra os cortes de pessoal programados na empresa .","O `` boicote '' foi decidido em assembléia na quarta ."],"id":35040}
-{"event_clusters":[[1,2,4],[30,31]],"sentence_no":[1,2,4,30,31],"sentences":["Mais de 50 alunos e alunas do colégio Bandeirantes , na zona sul de São Paulo , foram à escola vestindo saia na manhã desta segunda-feira ( 10 ) .","Foi um protesto pelo fato de o colégio ter censurado o comportamento de dois alunos que usaram saia , um na quinta-feira ( 6 ) , durante uma festa junina , e outro na sexta ( 7 ) .","Batizado de `` saiaço '' , o ato foi articulado na sexta , depois que um aluno do terceiro ano do ensino médio , de 17 anos , foi mandado de volta para casa por usar saia .","Em manifestação contra as ofensas à Pereira , estudantes da USP organizaram o protesto `` USP de saia !","`` , e decidiram ir às aulas e passar o dia de saia ."],"id":35041}
-{"event_clusters":[[1,3,11]],"sentence_no":[1,3,11],"sentences":["A rodovia Régis Bittencourt ficou com a pista sentido Curitiba fechada por quase uma hora na noite desta quarta-feira ( 8 ) na região de Miracatu ( a 138 km de São Paulo ) .","A assessoria da concessionária afirmou que alguns motoristas se revoltaram com a ação dos bandidos e fecharam a rodovia na altura do km 370 , na altura da praça de pedágio .","A polícia diz que motoristas tentaram invadir a central operacional do pedágio para protestar contra a série de roubos , mas foram impedidos pelos policiais ."],"id":35042}
-{"event_clusters":[[5,6],[1,2,7,9]],"sentence_no":[1,2,5,6,7,9],"sentences":["O Movimento dos Sem-Terra ( MST ) montou hoje mais um acampamento no Pontal do Paranapanema - a região de São Paulo que apresenta maiores tensões na área da reforma agrária .","Instalado às margens da rodovia que dá acesso à cidade de Euclides da Cunha Paulista , no extremo oeste do Estado , este é o sétimo acampamento criado pelo MST na região em menos de dois meses .","Na sexta-feira já havia sido montado um acampamento em Teodoro Sampaio , num terreno pertencente à prefeitura da cidade e também localizado na rodovia de acesso .","Ontem pela manhã podiam ser contados quase cinqüenta barracos de lona preta naquela área , ao mesmo tempo que outro estava sendo erguido .","A maioria dos acampados é formada por moradores de Teodoro.O acampamento de Euclides da Cunha Paulista foi criado a partir da iniciativa de filhos de trabalhadores rurais que já foram assentados no processo de reforma agrária da região do Pontal .","Ontem , a organização do movimento estava arregimentando pessoas da cidade para engrossar aquele acampamento.EvoluçãoOs militantes do MST que atuam no trabalho de arregimentação têm argumentado , nas reuniões que promovem com grupos de dez a vinte pessoas , especialmente nas áreas mais pobres das cidades do Pontal , que a reforma agrária no governo de Luiz Inácio Lula da Silva será intensificada ."],"id":35043}
-{"event_clusters":[[1,20],[8]],"sentence_no":[1,8,20],"sentences":["Trabalhadores da Petrobras iniciaram greve em oito Estados nesta quinta-feira ( 29 ) , reclamando de lentidão nas negociações sobre salários e do plano de venda de ativos da estatal , informou a Federação Nacional dos Petroleiros ( FNP ) , que representa cinco sindicatos da categoria .","O secretário-geral da FNP , Adaedson Bezerra Costa , disse que a adesão na refinaria Presidente Bernardes , em Cubatão , seria de 100 % entre os funcionários do turno atual , que não entraram para trabalhar .","Procurada , a Petrobras repetiu o posicionamento de quarta-feira , sem informar se a paralisação de funcionários afeta a produção de petróleo ou o refino ."],"id":35044}
-{"event_clusters":[[1,2,4],[8],[6]],"sentence_no":[1,2,4,6,8],"sentences":["24\/07\/2003 - 11h37 Servidores tentam invadir gabinete de Berzoini FELIPE FREIRE da Folha Online , em Brasília Cerca de 40 servidores públicos do INSS ( Instituto Nacional do Seguro Social ) protestam nesta manhã na porta do Ministério da Previdência contra a reforma proposta pelo governo .","Os manifestantes tentaram invadir o gabinete do ministro Ricardo Berzoini , que aceitou receber uma comissão para debate .","O comando grevista se reuniu nesta manhã e decidiu antecipar as manifestações anti-reforma devido à aprovação do relatório do deputado José Pimentel ( PT-CE ) na Comissão Especial .","De acordo com as estatísticas do comando , a adesão à greve hoje é de 60 a 65 % dos servidores federais .","Ontem , cerca de 300 servidores protestaram na porta da Câmara dos Deputados ."],"id":35045}
-{"event_clusters":[[1,3,11,12,14,15,16,20,21,24,25,26,51,54],[31]],"sentence_no":[1,3,11,12,14,15,16,20,21,24,25,26,31,51,54],"sentences":["Ponto de atos pró-Lula no Santa Cândida , em Curitiba .","Pela câmera acoplada na mini aeronave não tripulada , policiais monitoram o movimento dos moradores locais indignados e dos “ acampados ” , que se avizinharam , em resistência ao encarceramento do ex-presidente , na área sitiada do entorno da superintendência da PF , onde o ambiente é cada vez mais tenso .","Do alto , as imagens do drone registram desde o dia 7 de abril o esvaziamento do acampamento – batizado de “ Lula Livre ” .","Nas duas primeiras semanas , após a chegada do ex-presidente , cerca de 500 manifestantes formavam o acampamento , com barracas espalhadas nas ruas do bairro e sobre as calçadas – a maioria membros do MST .","+ Após uma semana preso , Lula já sente isolamento político + Lula fica em ‘ cela ’ com TV e banho quente Desde o dia 17 , são cerca de 70 , segundo a organização , que passaram a dormir em barracas em um terreno alugado a 800 metros do ponto principal dos protestos , a esquina Olga Benário – como batizaram os “ acampados ” o cruzamento das ruas Guilherme Matter com a Dr. Barreto Coutinho .","O cruzamento é o marco zero do acampamento , que está bloqueado pelos manifestantes e pelo cordão da isolamento da Polícia Militar – que cumpre ordem da Justiça estadual de interdito da área do entorno da PF , desde a chegada de Lula – e principal acesso para o prédio da PF .","Nesse ponto , todos os dias são feitos protestos , reuniões e atos contra a prisão do ex-presidente .","A encruzilhada dos protestos virou o epicentro da discórdia , entre “ acampados ” e os moradores .","É no local que todos os dias o grito em coro , amplificado em potentes caixas acústicas , quebra o silêncio das manhãs do bairro : “ Bom dia , presidente Lula !","Uma saudação-protesto que vai se repetir no “ boa tarde ” e no “ boa noite ” .","“ Tem a sujeira , tem a preocupação com gente estranha , tem as barracas na sua calçada , mas o que mais incomoda é esse ‘ bom dia , Lula ’ que gritam todo dia de manhã .","Ninguém suporta mais isso ” , conta um morador , de 72 anos , que pede para não ser identificado .","Em um abaixo-assinado enviado à governadora do Paraná , Cida Borghetti ( PP ) , com cópia à Justiça Federal , no dia 28 , parte dos moradores organizados relatou a sensação de “ medo ” e a “ baderna ” que os incomoda .","Distante duas quadras do ponto onde ocorrem as manifestações , o ex-presidente informa os manifestantes que ouve diariamente os gritos – reverberados em caixas acústicas – de “ bom dia ” , “ boa tarde ” e “ boa noite ” e conclama seus apoiadores a resistirem .","No dia 1.ª de Maio , o petista preso levou a Curitiba pelo menos 5 mil sindicalista e apoiadores que transformaram o Dia do Trabalha em dia de “ Lula Livre ” ."],"id":35046}
-{"event_clusters":[[1,2,3]],"sentence_no":[1,2,3],"sentences":["14\/10\/2003 - 12h25 Professores estaduais fazem manifestação no Rio Publicidade da Folha Online Hoje não há aula nas escolas da rede estadual .","Profissionais de educação e alunos fazem , a partir das 12h , uma passeata até o Palácio Guanabara , sede do governo do estado do Rio , pedindo soluções para os problemas que as 1.849 escolas estaduais vêm enfrentando desde o inicio do ano letivo , como a falta de professores e o fim da gratificação do Programa Nova Escola .","Cerca de 300 manifestantes se encontram no Largo do Machado , zona sul do Rio , local da concentração para a Marcha em Defesa da Educação Pública Estadual ."],"id":35047}
-{"event_clusters":[[1,2,3]],"sentence_no":[1,2,3],"sentences":["Manifestantes bloqueiam na manhã desta quinta-feira ( 30 ) a pista principal da Radial Leste , no sentido centro de São Paulo .","Por volta das 6h30 , o grupo carregando faixas com frases como `` Fora Temer '' e pedidos de moradia popular caminhavam pela via próximo à estação Belém do Metrô .","A Polícia Militar disse que os manifestantes fazem parte da União dos Sem-Teto da Favela , mas não soube informar o número de pessoas que participam do protesto ."],"id":35048}
-{"event_clusters":[[13,26]],"sentence_no":[13,26],"sentences":["A repórter Carolina Ercolin acompanhou um ato pró-Bolsonaro em São Paulo no último mês e constatou que eleitores do ex-capitão do Exército buscam no polêmico militar da Reserva a redenção para o que chamam de “ erros do passado ” .","Militantes pró-Bolsonaro em ato em São Paulo ( Foto : Carolina Ercolin ) Apoiadores de Bolsonaro durante protesto em São Paulo ( Foto : Carolina Ercolin ) Carreata na capital paulista em apoio a Bolsonaro ( Foto : Carolina Ercolin )"],"id":35049}
-{"event_clusters":[[9,11,14,19]],"sentence_no":[9,11,14,19],"sentences":["O ataque ocorreu por volta das 23h20 , cerca de cinco minutos após o Batalhão do Choque chegar e dispersar os manifestantes que depredavam o Palácio Tiradentes , sede da Assembleia Legislativa do Rio .","Repercussão Segundo o advogado João Oliveira , irmão de Liv , ela foi ao protesto com amigos , mas se perdeu do grupo no momento da chegada dos policiais .","Eles pegaram um grupo heterogêneo , sem nenhuma relação entre si , e alegaram que estavam em quadrilha depredando .","Na análise da OAB do Rio , a polícia prendeu de forma arbitrárias pessoas não envolvidas na depredação da Alerj ."],"id":35050}
-{"event_clusters":[[1,5]],"sentence_no":[1,5],"sentences":["13\/02\/2006 - 21h55 Sem-terra invadem sede do Incra em Mato Grosso do Sul Publicidade ANA RAQUEL COPETTI da Agência Folha , em Campo Grande Cerca de 150 sem-terra ligados à FAF ( Federação dos Trabalhadores na Agricultura Familiar ) invadiram nesta segunda-feira a sede do Incra ( Instituto de Colonização e Reforma Agrária ) em Campo Grande ( MS ) .","As famílias armaram barracas e estenderam colchões para dormir em frente ao Incra ."],"id":35051}
-{"event_clusters":[[1,2],[3,4]],"sentence_no":[1,2,3,4],"sentences":["Os índios guajajaras que haviam interditado a rodovia estadual MA-006 que interliga Grajaú e Arame , municípios que ficam distante cerca de 500 km de São Luís , desocuparam a estrada hoje .","Os índios haviam feito uma vala no asfalto para impedir a movimentação de veículos , próximo à aldeia Estirão.Delegados da Polícia Federal e técnicos da Funai convenceram os indígenas a liberar a rodovia depois que comerciantes de Grajaú e Arame , que ficaram isoladas do resto do estado por conta da ocupação , deram um ultimato aos índios de que se a rodovia não fosse liberada , eles impediram qualquer guajajara de entrar nas duas cidades.Segundo os policiais da Delegacia de Polícia de Grajaú , com o ultimato , as lideranças resolveram esperar o resultado das negociações entre técnicos da Fundação Nacional do Índio ( Funai ) e Fundação Nacional de Saúde ( Funasa ) .","Essas negociações acontecem em Alto Alegre do Pindaré , onde um outro grupo de guajajaras interditou a Estrada de Ferro Carajás ( EFC ) por 48 horas .","De acordo com fontes , duas funcionárias da Funasa são mantidas como reféns.ReivindicaçõesOs dois grupos de índios tinham a mesma pauta de reivindicação : eles querem a revisão do modelo de assistência de saúde às comunidades que ficam dentro das 17 reservas localizadas no Maranhão , um inventário das terras indígenas , a sua demarcação , e a fiscalização das áreas por grupos de índios.Em Alto Alegre do Pindaré , as negociações prosseguem em um clima tenso ."],"id":35052}
-{"event_clusters":[[1,4]],"sentence_no":[1,4],"sentences":["14\/02\/2002 - 15h36 Protesto de moradores de favela interdita pista da marginal Tietê Publicidade da Folha Online Moradores da Favela do Gato , na zona norte de São Paulo , interditaram hoje a pista local da marginal Tietê , no sentido Ayrton Senna , próximo à avenida do Estado .","Cerca de 40 pessoas participaram do protesto ."],"id":35053}
-{"event_clusters":[[20],[1,2,3,7,11],[19,22],[16,18]],"sentence_no":[1,2,3,7,11,16,18,19,20,22],"sentences":["Ao menos 36 pessoas que tentaram ocupar o Centro Estadual de Educação Tecnológica Paula de Souza , no centro de São Paulo , deixaram o 2º DP ( Bom Retiro ) por volta das 2h desta sexta-feira ( 4 ) .","Os estudantes secundaristas e do ensino superior tinham ocupado a área externa do prédio às 17h50 desta quinta ( 3 ) .","Eles instalaram barracas sob a marquise .","Durante a chegada do choque , o grito de guerra era : `` Alckmin , cara de pau , quero a Fatec igual à do comercial '' .","AGRESSÕES Na delegacia , policiais militares disseram que a desocupação do prédio foi pacífica com os estudantes recolhendo as barracas que tinham montado sob a marquise da escola técnica .","GUARULHOS Também na noite desta quinta , o campus da Unifesp em Guarulhos foi ocupado por estudantes que protestam contra a PEC 241 e a reforma do ensino médio .","Em uma página do Facebook , eles afirmam que a ocupação foi decidida em assembleia .","facebook DESOCUPAÇÕES Depois de quase um mês de ocupações de estudantes a escolas e prédios públicos pelo Brasil , começaram ordens judiciais para reintegrar posse dos locais .","Na tarde desta quinta , uma juíza do Paraná determinou a reintegração de posse das 44 escolas no estado que ainda estavam ocupadas .","As ocupações afetaram o Enem , que acontece neste fim de semana ."],"id":35054}
-{"event_clusters":[[2],[3]],"sentence_no":[2,3],"sentences":["Essas são unidades prejudicadas pela greve de professores e funcionários , que durou quase três meses .","O cronograma da Fatec São Paulo , que também sofreu paralisação , será divulgado após o dia 10 ( quinta-feira ) -- os alunos dessa faculdade estão em greve há três meses ."],"id":35055}
-{"event_clusters":[[1,5,6,8]],"sentence_no":[1,5,6,8],"sentences":["Manifestação fez parte da 'Caravana em Defesa do Rio São Francisco e do Semi-Árido ' , de passagem por Maceió Ambientalistas , militantes de movimentos sociais e representantes de várias entidades da sociedade civil organizada participaram neste sábado , 1 , de uma passeata pelas ruas de Maceió , em defesa do Rio São Francisco .","No ato público estava presente também o professor da Universidade Federal do Rio Grande do Norte , João Abner , além de representantes de organizações não governamentais como João Suassuna , da Fundação Joaquim Nabuco , e Apolo Heringer , do Projeto Manuelzão .","Ineficaz contra secaO encontro foi realizado no auditório da OAB\/AL .","Depois da passeata , os manifestantes retornaram à sede da OAB\/AL , onde realizaram o encerramento do ato ."],"id":35056}
-{"event_clusters":[[1,2,3]],"sentence_no":[1,2,3],"sentences":["Um ônibus foi incendiado na rua Olho D'Água dos Borges , na Vila Sílvia , zona leste de São Paulo , por volta das 21h30 de ontem ( 20 ) .","Grande SP tem chacina , nove mortos e ônibus incendiado O ônibus estava parado no ponto final quando cinco homens , três deles armados , mandaram o motorista e o cobrador descerem do coletivo .","A quadrilha espalhou combustível no ônibus e ateou fogo ."],"id":35057}
-{"event_clusters":[[1,6,7]],"sentence_no":[1,6,7],"sentences":["14\/06\/2004 - 16h51 Justiça considera greve ilegal e PM do Piauí volta ao trabalho Publicidade da Folha Online A Justiça do Piauí considerou , nesta segunda-feira , ilegal a greve dos policiais militares do Estado .","No caso da Polícia Civil do Estado , a greve continua , apesar de também haver decisão judicial considerando a greve ilegal .","A manutenção da greve foi decidida na manhã desta segunda , também durante assembléia ."],"id":35058}
-{"event_clusters":[[1,15,16,17]],"sentence_no":[1,15,16,17],"sentences":["Grupo fez protesto em frente ao hospital contra mortes causadas durante confronto com a polícia Ao menos dez pessoas morreram na tarde desta segunda-feira , 4 , após tiroteio entre policiais civis e criminosos na Favela Lagoinha , em Duque de Caxias , na Baixada Fluminense .","Manifestação Os dez corpos foram retirados do morro e levados para o Hospital Duque de Caxias .","Moradores seguiram para a unidade e fizeram um protesto contra a operação policial .","Cerca de 300 pessoas se concentraram na Avenida Manoel Lucas e forçaram as duas entradas do hospital ."],"id":35059}
-{"event_clusters":[[1,4],[6]],"sentence_no":[1,4,6],"sentences":["25\/07\/2003 - 19h29 Luciana Genro protesta contra reforma da Previdência no PI da Agência Folha A deputada Luciana Genro ( PT-RS ) , que passa por um processo de expulsão do PT por divergir das orientações do partido , participou hoje de uma manifestação contra a reforma da Previdência em frente à sede do governo do Piauí , em Teresina .","O deputado federal Afonso Gil ( PC do B-PI ) , que esteve presente no ato público , também afirmou que votará contra a proposta de reforma da Previdência no Congresso .","Os servidores do Piauí estão em greve há 17 dias ."],"id":35060}
+{
+  "event_clusters": [
+    [
+      1,
+      2
+    ]
+  ],
+  "sentence_no": [
+    1,
+    2
+  ],
+  "sentences": [
+    "11\/02\/2003 - 04h25 Em protesto contra demissões , fiscais da CET evitam aplicar multas da Folha de S.Paulo Os marronzinhos da CET ( Companhia de Engenharia de Tráfego ) de São Paulo realizam desde a última quinta-feira uma `` operação padrão '' , evitando aplicar multas de trânsito , em protesto contra os cortes de pessoal programados na empresa .",
+    "O `` boicote '' foi decidido em assembléia na quarta ."
+  ],
+  "id": 35040
+}
+{
+  "event_clusters": [
+    [
+      1,
+      2,
+      4
+    ],
+    [
+      30,
+      31
+    ]
+  ],
+  "sentence_no": [
+    1,
+    2,
+    4,
+    30,
+    31
+  ],
+  "sentences": [
+    "Mais de 50 alunos e alunas do colégio Bandeirantes , na zona sul de São Paulo , foram à escola vestindo saia na manhã desta segunda-feira ( 10 ) .",
+    "Foi um protesto pelo fato de o colégio ter censurado o comportamento de dois alunos que usaram saia , um na quinta-feira ( 6 ) , durante uma festa junina , e outro na sexta ( 7 ) .",
+    "Batizado de `` saiaço '' , o ato foi articulado na sexta , depois que um aluno do terceiro ano do ensino médio , de 17 anos , foi mandado de volta para casa por usar saia .",
+    "Em manifestação contra as ofensas à Pereira , estudantes da USP organizaram o protesto `` USP de saia !",
+    "`` , e decidiram ir às aulas e passar o dia de saia ."
+  ],
+  "id": 35041
+}
+{
+  "event_clusters": [
+    [
+      1,
+      3,
+      11
+    ]
+  ],
+  "sentence_no": [
+    1,
+    3,
+    11
+  ],
+  "sentences": [
+    "A rodovia Régis Bittencourt ficou com a pista sentido Curitiba fechada por quase uma hora na noite desta quarta-feira ( 8 ) na região de Miracatu ( a 138 km de São Paulo ) .",
+    "A assessoria da concessionária afirmou que alguns motoristas se revoltaram com a ação dos bandidos e fecharam a rodovia na altura do km 370 , na altura da praça de pedágio .",
+    "A polícia diz que motoristas tentaram invadir a central operacional do pedágio para protestar contra a série de roubos , mas foram impedidos pelos policiais ."
+  ],
+  "id": 35042
+}
+{
+  "event_clusters": [
+    [
+      5,
+      6
+    ],
+    [
+      1,
+      2,
+      7,
+      9
+    ]
+  ],
+  "sentence_no": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    9
+  ],
+  "sentences": [
+    "O Movimento dos Sem-Terra ( MST ) montou hoje mais um acampamento no Pontal do Paranapanema - a região de São Paulo que apresenta maiores tensões na área da reforma agrária .",
+    "Instalado às margens da rodovia que dá acesso à cidade de Euclides da Cunha Paulista , no extremo oeste do Estado , este é o sétimo acampamento criado pelo MST na região em menos de dois meses .",
+    "Na sexta-feira já havia sido montado um acampamento em Teodoro Sampaio , num terreno pertencente à prefeitura da cidade e também localizado na rodovia de acesso .",
+    "Ontem pela manhã podiam ser contados quase cinqüenta barracos de lona preta naquela área , ao mesmo tempo que outro estava sendo erguido .",
+    "A maioria dos acampados é formada por moradores de Teodoro.O acampamento de Euclides da Cunha Paulista foi criado a partir da iniciativa de filhos de trabalhadores rurais que já foram assentados no processo de reforma agrária da região do Pontal .",
+    "Ontem , a organização do movimento estava arregimentando pessoas da cidade para engrossar aquele acampamento.EvoluçãoOs militantes do MST que atuam no trabalho de arregimentação têm argumentado , nas reuniões que promovem com grupos de dez a vinte pessoas , especialmente nas áreas mais pobres das cidades do Pontal , que a reforma agrária no governo de Luiz Inácio Lula da Silva será intensificada ."
+  ],
+  "id": 35043
+}
+{
+  "event_clusters": [
+    [
+      1,
+      20
+    ],
+    [
+      8
+    ]
+  ],
+  "sentence_no": [
+    1,
+    8,
+    20
+  ],
+  "sentences": [
+    "Trabalhadores da Petrobras iniciaram greve em oito Estados nesta quinta-feira ( 29 ) , reclamando de lentidão nas negociações sobre salários e do plano de venda de ativos da estatal , informou a Federação Nacional dos Petroleiros ( FNP ) , que representa cinco sindicatos da categoria .",
+    "O secretário-geral da FNP , Adaedson Bezerra Costa , disse que a adesão na refinaria Presidente Bernardes , em Cubatão , seria de 100 % entre os funcionários do turno atual , que não entraram para trabalhar .",
+    "Procurada , a Petrobras repetiu o posicionamento de quarta-feira , sem informar se a paralisação de funcionários afeta a produção de petróleo ou o refino ."
+  ],
+  "id": 35044
+}
+{
+  "event_clusters": [
+    [
+      1,
+      2,
+      4
+    ],
+    [
+      8
+    ],
+    [
+      6
+    ]
+  ],
+  "sentence_no": [
+    1,
+    2,
+    4,
+    6,
+    8
+  ],
+  "sentences": [
+    "24\/07\/2003 - 11h37 Servidores tentam invadir gabinete de Berzoini FELIPE FREIRE da Folha Online , em Brasília Cerca de 40 servidores públicos do INSS ( Instituto Nacional do Seguro Social ) protestam nesta manhã na porta do Ministério da Previdência contra a reforma proposta pelo governo .",
+    "Os manifestantes tentaram invadir o gabinete do ministro Ricardo Berzoini , que aceitou receber uma comissão para debate .",
+    "O comando grevista se reuniu nesta manhã e decidiu antecipar as manifestações anti-reforma devido à aprovação do relatório do deputado José Pimentel ( PT-CE ) na Comissão Especial .",
+    "De acordo com as estatísticas do comando , a adesão à greve hoje é de 60 a 65 % dos servidores federais .",
+    "Ontem , cerca de 300 servidores protestaram na porta da Câmara dos Deputados ."
+  ],
+  "id": 35045
+}
+{
+  "event_clusters": [
+    [
+      1,
+      3,
+      11,
+      12,
+      14,
+      15,
+      16,
+      20,
+      21,
+      24,
+      25,
+      26,
+      51,
+      54
+    ],
+    [
+      31
+    ]
+  ],
+  "sentence_no": [
+    1,
+    3,
+    11,
+    12,
+    14,
+    15,
+    16,
+    20,
+    21,
+    24,
+    25,
+    26,
+    31,
+    51,
+    54
+  ],
+  "sentences": [
+    "Ponto de atos pró-Lula no Santa Cândida , em Curitiba .",
+    "Pela câmera acoplada na mini aeronave não tripulada , policiais monitoram o movimento dos moradores locais indignados e dos “ acampados ” , que se avizinharam , em resistência ao encarceramento do ex-presidente , na área sitiada do entorno da superintendência da PF , onde o ambiente é cada vez mais tenso .",
+    "Do alto , as imagens do drone registram desde o dia 7 de abril o esvaziamento do acampamento – batizado de “ Lula Livre ” .",
+    "Nas duas primeiras semanas , após a chegada do ex-presidente , cerca de 500 manifestantes formavam o acampamento , com barracas espalhadas nas ruas do bairro e sobre as calçadas – a maioria membros do MST .",
+    "+ Após uma semana preso , Lula já sente isolamento político + Lula fica em ‘ cela ’ com TV e banho quente Desde o dia 17 , são cerca de 70 , segundo a organização , que passaram a dormir em barracas em um terreno alugado a 800 metros do ponto principal dos protestos , a esquina Olga Benário – como batizaram os “ acampados ” o cruzamento das ruas Guilherme Matter com a Dr. Barreto Coutinho .",
+    "O cruzamento é o marco zero do acampamento , que está bloqueado pelos manifestantes e pelo cordão da isolamento da Polícia Militar – que cumpre ordem da Justiça estadual de interdito da área do entorno da PF , desde a chegada de Lula – e principal acesso para o prédio da PF .",
+    "Nesse ponto , todos os dias são feitos protestos , reuniões e atos contra a prisão do ex-presidente .",
+    "A encruzilhada dos protestos virou o epicentro da discórdia , entre “ acampados ” e os moradores .",
+    "É no local que todos os dias o grito em coro , amplificado em potentes caixas acústicas , quebra o silêncio das manhãs do bairro : “ Bom dia , presidente Lula !",
+    "Uma saudação-protesto que vai se repetir no “ boa tarde ” e no “ boa noite ” .",
+    "“ Tem a sujeira , tem a preocupação com gente estranha , tem as barracas na sua calçada , mas o que mais incomoda é esse ‘ bom dia , Lula ’ que gritam todo dia de manhã .",
+    "Ninguém suporta mais isso ” , conta um morador , de 72 anos , que pede para não ser identificado .",
+    "Em um abaixo-assinado enviado à governadora do Paraná , Cida Borghetti ( PP ) , com cópia à Justiça Federal , no dia 28 , parte dos moradores organizados relatou a sensação de “ medo ” e a “ baderna ” que os incomoda .",
+    "Distante duas quadras do ponto onde ocorrem as manifestações , o ex-presidente informa os manifestantes que ouve diariamente os gritos – reverberados em caixas acústicas – de “ bom dia ” , “ boa tarde ” e “ boa noite ” e conclama seus apoiadores a resistirem .",
+    "No dia 1.ª de Maio , o petista preso levou a Curitiba pelo menos 5 mil sindicalista e apoiadores que transformaram o Dia do Trabalha em dia de “ Lula Livre ” ."
+  ],
+  "id": 35046
+}
+{
+  "event_clusters": [
+    [
+      1,
+      2,
+      3
+    ]
+  ],
+  "sentence_no": [
+    1,
+    2,
+    3
+  ],
+  "sentences": [
+    "14\/10\/2003 - 12h25 Professores estaduais fazem manifestação no Rio Publicidade da Folha Online Hoje não há aula nas escolas da rede estadual .",
+    "Profissionais de educação e alunos fazem , a partir das 12h , uma passeata até o Palácio Guanabara , sede do governo do estado do Rio , pedindo soluções para os problemas que as 1.849 escolas estaduais vêm enfrentando desde o inicio do ano letivo , como a falta de professores e o fim da gratificação do Programa Nova Escola .",
+    "Cerca de 300 manifestantes se encontram no Largo do Machado , zona sul do Rio , local da concentração para a Marcha em Defesa da Educação Pública Estadual ."
+  ],
+  "id": 35047
+}
+{
+  "event_clusters": [
+    [
+      1,
+      2,
+      3
+    ]
+  ],
+  "sentence_no": [
+    1,
+    2,
+    3
+  ],
+  "sentences": [
+    "Manifestantes bloqueiam na manhã desta quinta-feira ( 30 ) a pista principal da Radial Leste , no sentido centro de São Paulo .",
+    "Por volta das 6h30 , o grupo carregando faixas com frases como `` Fora Temer '' e pedidos de moradia popular caminhavam pela via próximo à estação Belém do Metrô .",
+    "A Polícia Militar disse que os manifestantes fazem parte da União dos Sem-Teto da Favela , mas não soube informar o número de pessoas que participam do protesto ."
+  ],
+  "id": 35048
+}
+{
+  "event_clusters": [
+    [
+      13,
+      26
+    ]
+  ],
+  "sentence_no": [
+    13,
+    26
+  ],
+  "sentences": [
+    "A repórter Carolina Ercolin acompanhou um ato pró-Bolsonaro em São Paulo no último mês e constatou que eleitores do ex-capitão do Exército buscam no polêmico militar da Reserva a redenção para o que chamam de “ erros do passado ” .",
+    "Militantes pró-Bolsonaro em ato em São Paulo ( Foto : Carolina Ercolin ) Apoiadores de Bolsonaro durante protesto em São Paulo ( Foto : Carolina Ercolin ) Carreata na capital paulista em apoio a Bolsonaro ( Foto : Carolina Ercolin )"
+  ],
+  "id": 35049
+}
+{
+  "event_clusters": [
+    [
+      9,
+      11,
+      14,
+      19
+    ]
+  ],
+  "sentence_no": [
+    9,
+    11,
+    14,
+    19
+  ],
+  "sentences": [
+    "O ataque ocorreu por volta das 23h20 , cerca de cinco minutos após o Batalhão do Choque chegar e dispersar os manifestantes que depredavam o Palácio Tiradentes , sede da Assembleia Legislativa do Rio .",
+    "Repercussão Segundo o advogado João Oliveira , irmão de Liv , ela foi ao protesto com amigos , mas se perdeu do grupo no momento da chegada dos policiais .",
+    "Eles pegaram um grupo heterogêneo , sem nenhuma relação entre si , e alegaram que estavam em quadrilha depredando .",
+    "Na análise da OAB do Rio , a polícia prendeu de forma arbitrárias pessoas não envolvidas na depredação da Alerj ."
+  ],
+  "id": 35050
+}
+{
+  "event_clusters": [
+    [
+      1,
+      5
+    ]
+  ],
+  "sentence_no": [
+    1,
+    5
+  ],
+  "sentences": [
+    "13\/02\/2006 - 21h55 Sem-terra invadem sede do Incra em Mato Grosso do Sul Publicidade ANA RAQUEL COPETTI da Agência Folha , em Campo Grande Cerca de 150 sem-terra ligados à FAF ( Federação dos Trabalhadores na Agricultura Familiar ) invadiram nesta segunda-feira a sede do Incra ( Instituto de Colonização e Reforma Agrária ) em Campo Grande ( MS ) .",
+    "As famílias armaram barracas e estenderam colchões para dormir em frente ao Incra ."
+  ],
+  "id": 35051
+}
+{
+  "event_clusters": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "sentence_no": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "sentences": [
+    "Os índios guajajaras que haviam interditado a rodovia estadual MA-006 que interliga Grajaú e Arame , municípios que ficam distante cerca de 500 km de São Luís , desocuparam a estrada hoje .",
+    "Os índios haviam feito uma vala no asfalto para impedir a movimentação de veículos , próximo à aldeia Estirão.Delegados da Polícia Federal e técnicos da Funai convenceram os indígenas a liberar a rodovia depois que comerciantes de Grajaú e Arame , que ficaram isoladas do resto do estado por conta da ocupação , deram um ultimato aos índios de que se a rodovia não fosse liberada , eles impediram qualquer guajajara de entrar nas duas cidades.Segundo os policiais da Delegacia de Polícia de Grajaú , com o ultimato , as lideranças resolveram esperar o resultado das negociações entre técnicos da Fundação Nacional do Índio ( Funai ) e Fundação Nacional de Saúde ( Funasa ) .",
+    "Essas negociações acontecem em Alto Alegre do Pindaré , onde um outro grupo de guajajaras interditou a Estrada de Ferro Carajás ( EFC ) por 48 horas .",
+    "De acordo com fontes , duas funcionárias da Funasa são mantidas como reféns.ReivindicaçõesOs dois grupos de índios tinham a mesma pauta de reivindicação : eles querem a revisão do modelo de assistência de saúde às comunidades que ficam dentro das 17 reservas localizadas no Maranhão , um inventário das terras indígenas , a sua demarcação , e a fiscalização das áreas por grupos de índios.Em Alto Alegre do Pindaré , as negociações prosseguem em um clima tenso ."
+  ],
+  "id": 35052
+}
+{
+  "event_clusters": [
+    [
+      1,
+      4
+    ]
+  ],
+  "sentence_no": [
+    1,
+    4
+  ],
+  "sentences": [
+    "14\/02\/2002 - 15h36 Protesto de moradores de favela interdita pista da marginal Tietê Publicidade da Folha Online Moradores da Favela do Gato , na zona norte de São Paulo , interditaram hoje a pista local da marginal Tietê , no sentido Ayrton Senna , próximo à avenida do Estado .",
+    "Cerca de 40 pessoas participaram do protesto ."
+  ],
+  "id": 35053
+}
+{
+  "event_clusters": [
+    [
+      20
+    ],
+    [
+      1,
+      2,
+      3,
+      7,
+      11
+    ],
+    [
+      19,
+      22
+    ],
+    [
+      16,
+      18
+    ]
+  ],
+  "sentence_no": [
+    1,
+    2,
+    3,
+    7,
+    11,
+    16,
+    18,
+    19,
+    20,
+    22
+  ],
+  "sentences": [
+    "Ao menos 36 pessoas que tentaram ocupar o Centro Estadual de Educação Tecnológica Paula de Souza , no centro de São Paulo , deixaram o 2º DP ( Bom Retiro ) por volta das 2h desta sexta-feira ( 4 ) .",
+    "Os estudantes secundaristas e do ensino superior tinham ocupado a área externa do prédio às 17h50 desta quinta ( 3 ) .",
+    "Eles instalaram barracas sob a marquise .",
+    "Durante a chegada do choque , o grito de guerra era : `` Alckmin , cara de pau , quero a Fatec igual à do comercial '' .",
+    "AGRESSÕES Na delegacia , policiais militares disseram que a desocupação do prédio foi pacífica com os estudantes recolhendo as barracas que tinham montado sob a marquise da escola técnica .",
+    "GUARULHOS Também na noite desta quinta , o campus da Unifesp em Guarulhos foi ocupado por estudantes que protestam contra a PEC 241 e a reforma do ensino médio .",
+    "Em uma página do Facebook , eles afirmam que a ocupação foi decidida em assembleia .",
+    "facebook DESOCUPAÇÕES Depois de quase um mês de ocupações de estudantes a escolas e prédios públicos pelo Brasil , começaram ordens judiciais para reintegrar posse dos locais .",
+    "Na tarde desta quinta , uma juíza do Paraná determinou a reintegração de posse das 44 escolas no estado que ainda estavam ocupadas .",
+    "As ocupações afetaram o Enem , que acontece neste fim de semana ."
+  ],
+  "id": 35054
+}
+{
+  "event_clusters": [
+    [
+      2
+    ],
+    [
+      3
+    ]
+  ],
+  "sentence_no": [
+    2,
+    3
+  ],
+  "sentences": [
+    "Essas são unidades prejudicadas pela greve de professores e funcionários , que durou quase três meses .",
+    "O cronograma da Fatec São Paulo , que também sofreu paralisação , será divulgado após o dia 10 ( quinta-feira ) -- os alunos dessa faculdade estão em greve há três meses ."
+  ],
+  "id": 35055
+}
+{
+  "event_clusters": [
+    [
+      1,
+      5,
+      6,
+      8
+    ]
+  ],
+  "sentence_no": [
+    1,
+    5,
+    6,
+    8
+  ],
+  "sentences": [
+    "Manifestação fez parte da 'Caravana em Defesa do Rio São Francisco e do Semi-Árido ' , de passagem por Maceió Ambientalistas , militantes de movimentos sociais e representantes de várias entidades da sociedade civil organizada participaram neste sábado , 1 , de uma passeata pelas ruas de Maceió , em defesa do Rio São Francisco .",
+    "No ato público estava presente também o professor da Universidade Federal do Rio Grande do Norte , João Abner , além de representantes de organizações não governamentais como João Suassuna , da Fundação Joaquim Nabuco , e Apolo Heringer , do Projeto Manuelzão .",
+    "Ineficaz contra secaO encontro foi realizado no auditório da OAB\/AL .",
+    "Depois da passeata , os manifestantes retornaram à sede da OAB\/AL , onde realizaram o encerramento do ato ."
+  ],
+  "id": 35056
+}
+{
+  "event_clusters": [
+    [
+      1,
+      2,
+      3
+    ]
+  ],
+  "sentence_no": [
+    1,
+    2,
+    3
+  ],
+  "sentences": [
+    "Um ônibus foi incendiado na rua Olho D'Água dos Borges , na Vila Sílvia , zona leste de São Paulo , por volta das 21h30 de ontem ( 20 ) .",
+    "Grande SP tem chacina , nove mortos e ônibus incendiado O ônibus estava parado no ponto final quando cinco homens , três deles armados , mandaram o motorista e o cobrador descerem do coletivo .",
+    "A quadrilha espalhou combustível no ônibus e ateou fogo ."
+  ],
+  "id": 35057
+}
+{
+  "event_clusters": [
+    [
+      1,
+      6,
+      7
+    ]
+  ],
+  "sentence_no": [
+    1,
+    6,
+    7
+  ],
+  "sentences": [
+    "14\/06\/2004 - 16h51 Justiça considera greve ilegal e PM do Piauí volta ao trabalho Publicidade da Folha Online A Justiça do Piauí considerou , nesta segunda-feira , ilegal a greve dos policiais militares do Estado .",
+    "No caso da Polícia Civil do Estado , a greve continua , apesar de também haver decisão judicial considerando a greve ilegal .",
+    "A manutenção da greve foi decidida na manhã desta segunda , também durante assembléia ."
+  ],
+  "id": 35058
+}
+{
+  "event_clusters": [
+    [
+      1,
+      15,
+      16,
+      17
+    ]
+  ],
+  "sentence_no": [
+    1,
+    15,
+    16,
+    17
+  ],
+  "sentences": [
+    "Grupo fez protesto em frente ao hospital contra mortes causadas durante confronto com a polícia Ao menos dez pessoas morreram na tarde desta segunda-feira , 4 , após tiroteio entre policiais civis e criminosos na Favela Lagoinha , em Duque de Caxias , na Baixada Fluminense .",
+    "Manifestação Os dez corpos foram retirados do morro e levados para o Hospital Duque de Caxias .",
+    "Moradores seguiram para a unidade e fizeram um protesto contra a operação policial .",
+    "Cerca de 300 pessoas se concentraram na Avenida Manoel Lucas e forçaram as duas entradas do hospital ."
+  ],
+  "id": 35059
+}
+{
+  "event_clusters": [
+    [
+      1,
+      4
+    ],
+    [
+      6
+    ]
+  ],
+  "sentence_no": [
+    1,
+    4,
+    6
+  ],
+  "sentences": [
+    "25\/07\/2003 - 19h29 Luciana Genro protesta contra reforma da Previdência no PI da Agência Folha A deputada Luciana Genro ( PT-RS ) , que passa por um processo de expulsão do PT por divergir das orientações do partido , participou hoje de uma manifestação contra a reforma da Previdência em frente à sede do governo do Piauí , em Teresina .",
+    "O deputado federal Afonso Gil ( PC do B-PI ) , que esteve presente no ato público , também afirmou que votará contra a proposta de reforma da Previdência no Congresso .",
+    "Os servidores do Piauí estão em greve há 17 dias ."
+  ],
+  "id": 35060
+}

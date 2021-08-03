@@ -46,6 +46,7 @@ def split_tag(chunk_tag):
         return ('O', None)
     return chunk_tag.split('-', maxsplit=1)
 
+
 def is_chunk_end(prev_tag, tag):
     """
     check if the previous chunk ended between the previous and current word
@@ -68,6 +69,7 @@ def is_chunk_end(prev_tag, tag):
         return True
 
     return prefix2 in ['B', 'S'] or prefix1 in ['E', 'S']
+
 
 def is_chunk_start(prev_tag, tag):
     """
@@ -160,10 +162,11 @@ def count_chunks(true_seqs, pred_seqs):
         correct_chunks[correct_chunk] += 1
 
     return (correct_chunks, true_chunks, pred_chunks,
-        correct_counts, true_counts, pred_counts)
+            correct_counts, true_counts, pred_counts)
+
 
 def get_result(correct_chunks, true_chunks, pred_chunks,
-    correct_counts, true_counts, pred_counts, verbose=True):
+               correct_counts, true_counts, pred_counts, verbose=True):
     """
     if verbose, print overall performance, as well as preformance per chunk type;
     otherwise, simply return overall prec, rec, f1 scores
@@ -192,16 +195,16 @@ def get_result(correct_chunks, true_chunks, pred_chunks,
     print("processed %i tokens with %i phrases; " % (sum_true_counts, sum_true_chunks), end='')
     print("found: %i phrases; correct: %i.\n" % (sum_pred_chunks, sum_correct_chunks), end='')
 
-    print("accuracy: %6.2f%%; (non-O)" % (100*nonO_correct_counts/nonO_true_counts))
-    print("accuracy: %6.2f%%; " % (100*sum_correct_counts/sum_true_counts), end='')
+    print("accuracy: %6.2f%%; (non-O)" % (100 * nonO_correct_counts / nonO_true_counts))
+    print("accuracy: %6.2f%%; " % (100 * sum_correct_counts / sum_true_counts), end='')
     print("precision: %6.2f%%; recall: %6.2f%%; FB1: %6.2f" % (prec, rec, f1))
 
     # for each chunk type, compute precision, recall and FB1 (default values are 0.0)
     for t in chunk_types:
         prec, rec, f1 = calc_metrics(correct_chunks[t], pred_chunks[t], true_chunks[t])
-        print("%17s: " %t , end='')
+        print("%17s: " % t, end='')
         print("precision: %6.2f%%; recall: %6.2f%%; FB1: %6.2f" %
-                    (prec, rec, f1), end='')
+              (prec, rec, f1), end='')
         print("  %d" % pred_chunks[t])
 
     return res
@@ -209,12 +212,14 @@ def get_result(correct_chunks, true_chunks, pred_chunks,
     # http://cnts.uia.ac.be/conll2003/ner/example.tex
     # but I'm not implementing this
 
+
 def evaluate(true_seqs, pred_seqs, verbose=True):
     (correct_chunks, true_chunks, pred_chunks,
-        correct_counts, true_counts, pred_counts) = count_chunks(true_seqs, pred_seqs)
+     correct_counts, true_counts, pred_counts) = count_chunks(true_seqs, pred_seqs)
     result = get_result(correct_chunks, true_chunks, pred_chunks,
-        correct_counts, true_counts, pred_counts, verbose=verbose)
+                        correct_counts, true_counts, pred_counts, verbose=verbose)
     return result
+
 
 def evaluate_conll_file(fileIterator):
     true_seqs, pred_seqs = [], []
@@ -232,6 +237,7 @@ def evaluate_conll_file(fileIterator):
             true_seqs.append(cols[-2])
             pred_seqs.append(cols[-1])
     return evaluate(true_seqs, pred_seqs)
+
 
 if __name__ == '__main__':
     """

@@ -73,11 +73,11 @@ class SpanBERTModel:
         _clusters = _pred['clusters']
         _docu = _pred['document']
         sentences_no_mark = np.zeros(len(_docu), dtype=int)
-        _split_idx = [i for i, e in enumerate(_docu) if e == '\n'] + [len(_docu)-1]
+        _split_idx = [i for i, e in enumerate(_docu) if e == '\n'] + [len(_docu) - 1]
         begin_idx = 0
         for i, end_idx in enumerate(_split_idx):
             sent_no = data['sentence_no'][i]
-            sentences_no_mark[begin_idx: end_idx+1] = sent_no
+            sentences_no_mark[begin_idx: end_idx + 1] = sent_no
             begin_idx = end_idx
         sentences_no_mark = sentences_no_mark.tolist()
         _sent_clusters = []
