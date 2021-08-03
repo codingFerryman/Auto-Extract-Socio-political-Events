@@ -12,6 +12,8 @@ from transformers import BigBirdTokenizer, BigBirdConfig, BigBirdForTokenClassif
 from transformers import DebertaV2Tokenizer, DebertaV2ForSequenceClassification, DebertaV2Config
 from transformers import RobertaTokenizer, RobertaForTokenClassification, RobertaConfig
 
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
 from conlleval import evaluate_conll_file
 
 
