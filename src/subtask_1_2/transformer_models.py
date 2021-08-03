@@ -201,7 +201,12 @@ def main(train_file, test_file=None):
     model.zero_grad()
     optimizer.zero_grad()
 
-    use_amp = True
+    cuda_device_capability = torch.cuda.get_device_capability()
+    if cuda_device_capability[0] >= 8:
+        use_amp = True
+    else:
+        use_amp = False
+
     scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
 
     if args.only_prediction is not None:

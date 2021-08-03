@@ -156,7 +156,7 @@ def evaluate_epoch(model, dataset):
         # outputs.extend(logits.argmax(dim=1).tolist())
 
     lines = []
-    with open("subtask4_predictions.tsv", "w") as outfile:
+    with open("subtask4_predictions.tsv", "w", encoding="utf-8") as outfile:
         for i_, j_, k_ in zip(words, targets, outputs):
             for i, j, k in zip(i_, j_, k_):
                 lines.append(" ".join((i, j, k)))
@@ -265,7 +265,12 @@ def main(train_file, test_file=None):
     model.zero_grad()
     optimizer.zero_grad()
 
-    use_amp = True
+    cuda_device_capability = torch.cuda.get_device_capability()
+    if cuda_device_capability[0] >= 8:
+        use_amp = True
+    else:
+        use_amp = False
+
     scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
 
     # only evaluate
