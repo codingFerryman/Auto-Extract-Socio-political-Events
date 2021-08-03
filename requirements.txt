@@ -1,5 +1,5 @@
 scikit-learn
-transformers>=4.8.1, <5.0.0
+transformers~=4.8.2
 torch==1.9.0+cu111
 tqdm
 pandas
@@ -7,6 +7,8 @@ numpy
 icecream
 stanza
 sentencepiece
+allennlp
+allennlp-models
 
 # package location
 --find-links https://download.pytorch.org/whl/torch_stable.html
