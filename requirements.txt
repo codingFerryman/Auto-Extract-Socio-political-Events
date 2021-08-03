@@ -6,6 +6,7 @@ pandas
 numpy
 icecream
 stanza
+sentencepiece
 
 # package location
 --find-links https://download.pytorch.org/whl/torch_stable.html
