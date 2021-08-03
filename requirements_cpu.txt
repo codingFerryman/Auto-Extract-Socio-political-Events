@@ -10,5 +10,9 @@ sentencepiece
 allennlp
 allennlp-models
 
+# Viz
+networkx
+pyvis
+
 # package location
 --find-links https://download.pytorch.org/whl/torch_stable.html
