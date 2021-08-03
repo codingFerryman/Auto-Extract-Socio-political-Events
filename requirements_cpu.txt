@@ -10,6 +10,8 @@ sentencepiece
 spacy
 allennlp
 allennlp-models
+clean-text
+unidecode
 
 # Viz
 networkx
