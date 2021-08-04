@@ -96,29 +96,30 @@ def main(train_file, prediction_output_file, test_file=None, submission_file=Non
             for doc in test_predictions:
                 f.write(json.dumps(doc) + "\n")
 
-# args = parse()
-# main(args.train_file, args.prediction_output_file, args.test_file)
-train_file = "../data/subtask3-coreference/en-train.json"
-prediction_output_file = "outputs/subtask3-predictions-OneCluster.json"
-test_file = "../data/test/test_subtask3.json"
-submission_file = "outputs/subtask3-submission-OneCluster.json"
-# main(train_file, prediction_output_file, test_file, submission_file)
-train_data = read(train_file)
-model = OneClusterModel()
-model.fit(train_data)
-# Predict train data so that we can evaluate our system
-train_predictions = model.predict(train_data)
-with open(prediction_output_file, "w", encoding="utf-8") as f:
-    for doc in train_predictions:
-        f.write(json.dumps(doc) + "\n")
-# Evaluate sys outputs and print results.
-evaluate(train_file, prediction_output_file)
+if __name__ == "__main__":
+    # args = parse()
+    # main(args.train_file, args.prediction_output_file, args.test_file)
+    train_file = "../data/subtask3-coreference/en-train.json"
+    prediction_output_file = "outputs/subtask3-predictions-OneCluster.json"
+    test_file = "../data/test/test_subtask3.json"
+    submission_file = "outputs/subtask3-submission-OneCluster.json"
+    # main(train_file, prediction_output_file, test_file, submission_file)
+    train_data = read(train_file)
+    model = OneClusterModel()
+    model.fit(train_data)
+    # Predict train data so that we can evaluate our system
+    train_predictions = model.predict(train_data)
+    with open(prediction_output_file, "w", encoding="utf-8") as f:
+        for doc in train_predictions:
+            f.write(json.dumps(doc) + "\n")
+    # Evaluate sys outputs and print results.
+    evaluate(train_file, prediction_output_file)
 
-test_data = read(test_file)
-# Predict and save your predictions in the required format.
-test_predictions = model.predict(test_data)
-if not submission_file:
-    submission_file = "sample_submission.json"
-with open(submission_file, "w", encoding="utf-8") as f:
-    for doc in test_predictions:
-        f.write(json.dumps(doc) + "\n")
+    test_data = read(test_file)
+    # Predict and save your predictions in the required format.
+    test_predictions = model.predict(test_data)
+    if not submission_file:
+        submission_file = "sample_submission.json"
+    with open(submission_file, "w", encoding="utf-8") as f:
+        for doc in test_predictions:
+            f.write(json.dumps(doc) + "\n")
