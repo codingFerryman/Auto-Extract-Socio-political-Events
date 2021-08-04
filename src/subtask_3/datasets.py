@@ -105,7 +105,8 @@ def _predict_failed_fetch(sent: str, id2label: dict, bio_model: PreTrainedModel,
     preds = torch.argmax(torch.softmax(logits, dim=-1), dim=-1).cpu().tolist()
     result = [id2label[i] for i in preds]
     tokens, result = _decode_subtoken_tags(tokens, result)
-    return {"tokens": tokens, "tags": result}
+    return tokens, result
+
 
 def _decode_subtoken_tags(tokens, tags):
     tokens_result = []
@@ -127,15 +128,22 @@ def _decode_subtoken_tags(tokens, tags):
     return tokens_result, tags_result
 
 
-def fetch_bio(sent: str, bio_data: dict, **kwargs):
-    _fetch_key = preprocess_key_clean(sent)
+def fetch_bio(sentences: List[str], bio_data: dict, **kwargs):
+    _fetch_key = "".join(sentences)
+    _fetch_key = preprocess_key_clean(_fetch_key)
     _data = bio_data[_fetch_key]
     if len(_data) == 0:
-        _data = _predict_failed_fetch(sent, **kwargs)
+        tokens_result = []
+        tags_result = []
+        for sent in sentences:
+            tokens, tags = _predict_failed_fetch(sent, **kwargs)
+            tokens_result.append(tokens)
+            tags_result.append(tags)
+        _data = {'tokens': tokens_result, 'tags': tags_result}
     return _data
 
 
-def process_coref_data(documents: List[Dict], bio_data: dict, bio_model_path: str=None) -> List[Dict]:
+def process_coref_data(documents: List[Dict], bio_data: dict, bio_model_path: str = None) -> List[Dict]:
     labels = ["B-etime", "B-fname", "B-organizer", "B-participant", "B-place", "B-target", "B-trigger",
               "I-etime", "I-fname", "I-organizer", "I-participant", "I-place", "I-target", "I-trigger", "O",
               "PAD"]
@@ -152,8 +160,8 @@ def process_coref_data(documents: List[Dict], bio_data: dict, bio_model_path: st
     result = []
     for document in tqdm(documents, desc="Fetching BIO information: "):
         sentences = document["sentences"]
-        _key = " ".join(sentences)
-        _fetched = fetch_bio(sent=_key, id2label=id2label, bio_data=bio_data, bio_model=model, bio_tokenizer=tokenizer)
+        _fetched = fetch_bio(sentences=sentences, id2label=id2label, bio_data=bio_data, bio_model=model,
+                             bio_tokenizer=tokenizer)
         document.update(_fetched)
         result.append(document)
     return documents
