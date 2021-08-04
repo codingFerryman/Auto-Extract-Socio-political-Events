@@ -1,3 +1,6 @@
 [submodule "src/subtask_3/baselines"]
 	path = src/subtask_3/baselines
 	url = https://github.com/alisafaya/event-coreference.git
+[submodule "src/subtask_3/coref-hoi"]
+	path = src/subtask_3/coref-hoi
+	url = https://github.com/lxucs/coref-hoi.git

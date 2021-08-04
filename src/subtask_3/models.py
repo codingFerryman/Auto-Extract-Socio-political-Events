@@ -3,10 +3,10 @@ from typing import List
 
 import numpy as np
 import pandas as pd
+import torch
 from tqdm import tqdm
 
-from allennlp.predictors.predictor import Predictor
-
+# from allennlp.predictors.predictor import Predictor
 
 
 class SpanBERTModel:
@@ -147,3 +147,8 @@ class OneClusterModel:
             preds.append({"id": instance["id"], "pred_clusters": [instance['sentence_no']]})
 
         return preds
+
+if __name__ == '__main__':
+    model_path = "../../models/train_spanbert_large_ml0_cm_fn1000_max_dloss/model_May22_23-31-16_66000.bin"
+    model = torch.load(model_path, map_location="cuda:0")
+    pass

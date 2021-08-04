@@ -9,7 +9,7 @@ from cleantext.clean import clean
 
 from allennlp.data import DatasetReader
 from transformers import BigBirdTokenizer, BigBirdConfig, BigBirdForTokenClassification, PreTrainedModel, \
-    PreTrainedTokenizer
+    PreTrainedTokenizer, BertTokenizer
 import torch
 from torch.utils.data import Dataset, DataLoader
 
@@ -24,7 +24,7 @@ from subtask_3 import coref_read
 
 
 class PreprocessedSpanBERTDataset(Dataset):
-    def __init__(self, tokenizer=None, preprocessed_data_path=None):
+    def __init__(self, tokenizer=None, preprocessed_data_path=None, max_length=138):
         if preprocessed_data_path is None:
             preprocessed_data_path = Path(CURRENT_DIRECTORY, 'preprocessed_data.json')
         if not preprocessed_data_path.is_file():
@@ -32,15 +32,65 @@ class PreprocessedSpanBERTDataset(Dataset):
             coref_data = load_coref()
             data = process_coref_data(coref_data, bio_data)
             save_to_file(data, save_path=preprocessed_data_path)
+        if tokenizer is None:
+            tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
 
         self.examples = load_coref(preprocessed_data_path)
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
+
+        self.tokenizer = tokenizer
 
     def __len__(self):
         return len(self.examples)
 
     def __getitem__(self, idx):
         item = self.examples[idx]
+        item.update(self.tokenize(**item))
+        item["doc_key"] = "nw"
+        item = self.bio2cluster(item)
+        return item
+
+    def tokenize(self, tokens, tags, **kwargs):
+        sentences = []
+        speakers = []
+        tags_map = []
+        subtoken_map = []
+        for tokens_instance, tags_instance in zip(tokens, tags):
+            sentence = ["[CLS]"]
+            speaker = ["[SPL]"]
+            tag_map = ["O"]
+            id_map = []
+            subtoken_id = 0
+            for token, tag in zip(tokens_instance, tags_instance):
+                subtokens = self.tokenizer.tokenize(token)
+                sentence.extend(subtokens)
+                speaker.extend(['-']*len(subtokens))
+                tag_map.extend([tag]*len(subtokens))
+                id_map.extend([subtoken_id]*len(subtokens))
+                subtoken_id += 1
+            sentence.append("[SEP]")
+            speaker.append(["[SPL]"])
+            tag_map.append("O")
+            id_map.append(id_map[-1])
+            sentences.append(sentence)
+            speakers.append(speaker)
+            tags_map.append(tag_map)
+            subtoken_map.append(id_map)
+
+        return {"sentences": sentences, "speakers": speakers, "tags": tags_map, "subtoken_map": subtoken_map}
+
+    def bio2cluster(self, item: dict):
+        sentence_no = item['sentence_no']
+        cluster2id = {k: v for k, v in enumerate(sentence_no)}
+        id2cluster = {v: k for k, v in enumerate(sentence_no)}
+        subtoken_cluster_id = 0
+        for cluster in item['event_clusters']:
+            cluster = [cluster2id[c] for c in cluster]
+
+
+
+
+
 
 
 def load_bio(data_path=None):
@@ -149,18 +199,23 @@ def fetch_bio(sentences: List[str], bio_data: dict, **kwargs):
     return _data
 
 
-def process_coref_data(documents: List[Dict], bio_data: dict, bio_model_path: str = None) -> List[Dict]:
-    labels = ["B-etime", "B-fname", "B-organizer", "B-participant", "B-place", "B-target", "B-trigger",
-              "I-etime", "I-fname", "I-organizer", "I-participant", "I-place", "I-target", "I-trigger", "O",
-              "PAD"]
-    id2label = {i: j for i, j in enumerate(labels)}
-
+def get_model_tokenizer(bio_model_path: str = None):
     if bio_model_path is None:
         _model_path = Path(CURRENT_DIRECTORY, '../..', 'models', 'bigbird-subtask4').resolve()
         assert _model_path.is_dir()
     config = BigBirdConfig.from_pretrained(_model_path)
     model = BigBirdForTokenClassification.from_pretrained(_model_path, config=config).to(device)
     tokenizer = BigBirdTokenizer.from_pretrained(_model_path)
+    return model, tokenizer
+
+
+def process_coref_data(documents: List[Dict], bio_data: dict) -> List[Dict]:
+    labels = ["B-etime", "B-fname", "B-organizer", "B-participant", "B-place", "B-target", "B-trigger",
+              "I-etime", "I-fname", "I-organizer", "I-participant", "I-place", "I-target", "I-trigger", "O",
+              "PAD"]
+    id2label = {i: j for i, j in enumerate(labels)}
+
+    model, tokenizer = get_model_tokenizer()
 
     result = []
     for document in tqdm(documents, desc="Fetching BIO information: "):
@@ -181,6 +236,55 @@ def save_to_file(processed_data: List[Dict], save_path: Union[str, Path] = None)
             f.write(json.dumps(doc) + "\n")
 
 
+def analyze_data(dataset_input):
+    sent_count = 0
+    target_count = 0
+    trigger_count = 0
+    participant_count = 0
+    organizer_count = 0
+    no_tag_count = 0
+    max_length = 0
+    for data in dataset_input:
+        tags = data['tags']
+        sent_count += len(tags)
+        for tags_instance in tags:
+            tags_instance_len = len(tags_instance)
+            if tags_instance_len > max_length:
+                max_length = tags_instance_len
+            flag = False
+            if 'B-trigger' in tags_instance:
+                trigger_count += 1
+                flag = True
+            if 'B-participant' in tags_instance:
+                participant_count += 1
+                flag = True
+            if 'B-organizer' in tags_instance:
+                organizer_count += 1
+                flag = True
+            if 'B-target' in tags_instance:
+                target_count += 1
+                flag = True
+            if flag is False:
+                no_tag_count += 1
+    print(f"Sentences' max length: {max_length}")
+    print("The ratio of sentences having ...")
+    print(f"B-trigger: \t {trigger_count/sent_count: 2.2%}")
+    print(f"B-participant: \t {participant_count/sent_count: 2.2%}")
+    print(f"B-organizer: \t {organizer_count/sent_count: 2.2%}")
+    print(f"B-target: \t {target_count/sent_count: 2.2%}")
+    print(f"Data without any tags above: \t {no_tag_count/sent_count: 2.2%}")
+
+    """
+    Sentences' max length: 136
+    The ratio of sentences having ...
+    B-trigger: 	  93.57%
+    B-participant: 	  56.96%
+    B-organizer: 	  21.22%
+    B-target: 	  27.37%
+    Data without any tags above: 	  3.10%
+    """
+
 if __name__ == "__main__":
     dataset = PreprocessedSpanBERTDataset()
+    analyze_data(dataset)
     pass
