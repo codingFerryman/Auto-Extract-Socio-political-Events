@@ -12,6 +12,7 @@ allennlp
 allennlp-models
 clean-text
 unidecode
+TorchCRF
 
 # Viz
 networkx
