@@ -1,0 +1,3 @@
+[submodule "src/subtask_3/baselines"]
+	path = src/subtask_3/baselines
+	url = https://github.com/alisafaya/event-coreference.git
