@@ -15,17 +15,25 @@ from torch.utils.data import Dataset, DataLoader
 
 # device = "cuda" if torch.cuda.is_available() else "cpu"
 device = "cpu"
+CURRENT_DIRECTORY = Path(__file__).parent.resolve()
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(str(Path(CURRENT_DIRECTORY, '..').resolve()))
 
 from subtask_4 import bio_read
 from subtask_3 import coref_read
 
 
-class SpanBERTDataset(Dataset):
-    def __init__(self, examples, tokenizer):
-        self.examples = examples
-        self.tokenizer = tokenizer
+class PreprocessedSpanBERTDataset(Dataset):
+    def __init__(self, tokenizer=None, preprocessed_data_path=None):
+        if preprocessed_data_path is None:
+            preprocessed_data_path = Path(CURRENT_DIRECTORY, 'preprocessed_data.json')
+        if not preprocessed_data_path.is_file():
+            bio_data = load_bio()
+            coref_data = load_coref()
+            data = process_coref_data(coref_data, bio_data)
+            save_to_file(data, save_path=preprocessed_data_path)
+
+        self.examples = load_coref(preprocessed_data_path)
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
     def __len__(self):
@@ -37,9 +45,8 @@ class SpanBERTDataset(Dataset):
 
 def load_bio(data_path=None):
     if data_path is None:
-        _file_path = os.path.dirname(__file__)
-        _bio_path = os.path.abspath(os.path.join(_file_path, '../..', 'data', 'subtask4-token', 'en-train.txt'))
-        assert Path(_bio_path).is_file()
+        _bio_path = Path(CURRENT_DIRECTORY, '../..', 'data', 'subtask4-token', 'en-train.txt').resolve()
+        assert _bio_path.is_file()
         data_path = _bio_path
     _bio_data = bio_read(data_path)
     _bio_data = [(sent[1:], tag[1:]) for sent, tag in _bio_data]
@@ -49,9 +56,8 @@ def load_bio(data_path=None):
 
 def load_coref(data_path=None):
     if data_path is None:
-        _file_path = os.path.dirname(__file__)
-        _coref_path = os.path.abspath(os.path.join(_file_path, '../..', 'data', 'subtask3-coreference', 'en-train.json'))
-        assert Path(_coref_path).is_file()
+        _coref_path = Path(CURRENT_DIRECTORY, '../..', 'data', 'subtask3-coreference', 'en-train.json').resolve()
+        assert _coref_path.is_file()
         data_path = _coref_path
     result = coref_read(data_path)
     return result
@@ -150,9 +156,8 @@ def process_coref_data(documents: List[Dict], bio_data: dict, bio_model_path: st
     id2label = {i: j for i, j in enumerate(labels)}
 
     if bio_model_path is None:
-        _file_path = os.path.dirname(__file__)
-        _model_path = os.path.abspath(os.path.join(_file_path, '../..', 'models', 'bigbird-subtask4'))
-        assert Path(_model_path).is_dir()
+        _model_path = Path(CURRENT_DIRECTORY, '../..', 'models', 'bigbird-subtask4').resolve()
+        assert _model_path.is_dir()
     config = BigBirdConfig.from_pretrained(_model_path)
     model = BigBirdForTokenClassification.from_pretrained(_model_path, config=config).to(device)
     tokenizer = BigBirdTokenizer.from_pretrained(_model_path)
@@ -169,8 +174,7 @@ def process_coref_data(documents: List[Dict], bio_data: dict, bio_model_path: st
 
 def save_to_file(processed_data: List[Dict], save_path: Union[str, Path] = None):
     if save_path is None:
-        _file_path = os.path.dirname(__file__)
-        save_path = os.path.abspath(os.path.join(_file_path, 'preprocessed_data.json'))
+        save_path = Path(CURRENT_DIRECTORY, 'preprocessed_data.json').resolve()
 
     with open(save_path, "w", encoding="utf-8") as f:
         for doc in processed_data:
@@ -178,8 +182,5 @@ def save_to_file(processed_data: List[Dict], save_path: Union[str, Path] = None)
 
 
 if __name__ == "__main__":
-    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-    bio_data = load_bio()
-    coref_data = load_coref()
-    data = process_coref_data(coref_data, bio_data)
-    save_to_file(data)
+    dataset = PreprocessedSpanBERTDataset()
+    pass
