@@ -1,5 +1,5 @@
-import os
 import sys
+import ast
 from collections import defaultdict
 from typing import Tuple, Dict, List, Union
 from pathlib import Path
@@ -21,6 +21,9 @@ sys.path.append(str(Path(CURRENT_DIRECTORY, '..').resolve()))
 
 from subtask_4 import bio_read
 from subtask_3 import coref_read
+
+
+
 
 
 class PreprocessedSpanBERTDataset(Dataset):
@@ -47,7 +50,8 @@ class PreprocessedSpanBERTDataset(Dataset):
         item = self.examples[idx]
         item.update(self.tokenize(**item))
         item["doc_key"] = "nw"
-        item = self.bio2cluster(item)
+        # TODO
+        # item = self.bio2cluster(item)
         return item
 
     def tokenize(self, tokens, tags, **kwargs):
@@ -86,11 +90,7 @@ class PreprocessedSpanBERTDataset(Dataset):
         subtoken_cluster_id = 0
         for cluster in item['event_clusters']:
             cluster = [cluster2id[c] for c in cluster]
-
-
-
-
-
+            # TODO
 
 
 def load_bio(data_path=None):
@@ -283,6 +283,7 @@ def analyze_data(dataset_input):
     B-target: 	  27.37%
     Data without any tags above: 	  3.10%
     """
+
 
 if __name__ == "__main__":
     dataset = PreprocessedSpanBERTDataset()

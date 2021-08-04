@@ -3,7 +3,7 @@ import itertools
 import json
 import subprocess
 
-from models import SpanBERTModel, OneClusterModel
+from models import PretrainedSpanBERTModel, MaxClusterModel, MinClusterModel
 
 
 def read(path):

@@ -1,6 +1,6 @@
 scikit-learn
 transformers~=4.8.2
-torch==1.9.0+cu111
+torch==1.8.1+cu102
 tqdm
 pandas
 numpy
