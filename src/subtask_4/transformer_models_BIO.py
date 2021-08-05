@@ -70,7 +70,7 @@ class SequenceClassificationDataset(Dataset):
         batch_labels = torch.tensor(batch_labels).to(self.device)
         assert model_inputs["input_ids"].shape == model_inputs["attention_mask"].shape == batch_labels.shape
 
-        # print (model_inputs["input_ids"].shape, model_inputs["attention_mask"].shape, batch_labels.shape)
+        # print (model_inputs["input_ids"].shape, model_inputs["attention_mask"].shape, batch_labels.shape
 
         return {"model_inputs": model_inputs, "label": batch_labels}, index2labels
 
@@ -331,10 +331,10 @@ if __name__ == "__main__":
     parser.add_argument('-test_file', '--test_file', required=True, help="The path to the training data json file")
     parser.add_argument('--dest', type=str, required=True, help='Folder to save the weights')
     parser.add_argument('--model', type=str, default='roberta-large')
-    parser.add_argument('--num_epochs', type=int, default=3)
+    parser.add_argument('--num_epochs', type=int, default=30)
     parser.add_argument("--gradient_accumulation_steps", type=int, default=8,
                         help="Number of updates steps to accumulate before performing a backward/update pass.")
-    parser.add_argument("--batch_size", default=4, type=int,
+    parser.add_argument("--batch_size", default=16, type=int,
                         help="Batch size per GPU/CPU for training.")
     parser.add_argument("--learning_rate", default=2e-5, type=float,
                         help="The initial learning rate for Adam.")
@@ -343,7 +343,14 @@ if __name__ == "__main__":
     parser.add_argument("--only_prediction", default=None, type=str,
                         help="Epsilon for Adam optimizer.")
 
-    args = parser.parse_args()
+    args = parser.parse_args(
+        # args=[
+        # '--train_file=../../data/subtask4-token/en-train.txt',
+        # '--test_file=../../data/subtask4-token/en-train.txt',
+        # '--model=google/bigbird-roberta-base',
+        # '--dest=../../models/bigbird-subtask4'
+        # ]
+    )
 
     main(args.train_file, args.test_file)
 

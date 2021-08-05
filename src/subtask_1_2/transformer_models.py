@@ -256,7 +256,7 @@ if __name__ == "__main__":
     parser.add_argument('--num_epochs', type=int, default=3)
     parser.add_argument("--gradient_accumulation_steps", type=int, default=8,
                         help="Number of updates steps to accumulate before performing a backward/update pass.")
-    parser.add_argument("--batch_size", default=4, type=int,
+    parser.add_argument("--batch_size", default=16, type=int,
                         help="Batch size per GPU/CPU for training.")
     parser.add_argument("--learning_rate", default=2e-5, type=float,
                         help="The initial learning rate for Adam.")

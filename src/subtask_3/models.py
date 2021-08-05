@@ -199,8 +199,8 @@ def prepare_set(p_set, n_set, model, tokenizer, max_length=256):
     pset = []
     for p, n in tqdm(zip(p_set, n_set), desc="Preparing dataset"):
         instance_pairs = []
-        pairs = [prepare_pair(pair[0], pair[1], 1, max_length=max_length, tokenizer=tokenizer) for pair in p] + [
-            prepare_pair(pair[0], pair[1], 0, max_length=max_length, tokenizer=tokenizer) for pair in n]
+        pairs = [prepare_pair(pair[0], pair[1], 1, max_length=max_length, tokenizer=tokenizer) for pair in p] + \
+                [prepare_pair(pair[0], pair[1], 0, max_length=max_length, tokenizer=tokenizer) for pair in n]
         random.shuffle(pairs)
         for x, y, label in pairs:
             instance_pairs.append(

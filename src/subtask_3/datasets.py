@@ -23,9 +23,6 @@ from subtask_4 import bio_read
 from subtask_3 import coref_read
 
 
-
-
-
 class PreprocessedSpanBERTDataset(Dataset):
     def __init__(self, tokenizer=None, preprocessed_data_path=None, max_length=138):
         if preprocessed_data_path is None:
@@ -134,9 +131,6 @@ def preprocess_bio_data(documents: List[Tuple]) -> Dict:
     for document in tqdm(documents, desc="Preprocessing BIO data in subtask4: "):
         _sent, _ = document
         _delimiter_location = [i for i, x in enumerate(_sent) if x == '[SEP]']
-        _filtered_sent = list(filter(('[SEP]').__ne__, _sent))
-        _key = "\n".join(_filtered_sent)
-        _key = preprocess_key_clean(_key)
 
         _idx = 0
         _words = []
@@ -146,6 +140,8 @@ def preprocess_bio_data(documents: List[Tuple]) -> Dict:
                 _words.append(_word)
                 _tags.append(_tag)
             else:
+                _key = "".join(_words)
+                _key = preprocess_key_clean(_key)
                 result[_key]["tokens"].append(_words)
                 result[_key]["tags"].append(_tags)
                 _words = []
@@ -165,10 +161,12 @@ def _predict_failed_fetch(sent: str, id2label: dict, bio_model: PreTrainedModel,
 
 
 def _decode_subtoken_tags(tokens, tags):
-    tokens_result = []
-    tags_result = []
+
     token_past = tokens[0][1:]
+    tokens_result = [token_past]
+    tags = tags[1:-1]
     tags_past = tags[0]
+    tags_result = [tags_past]
     for token, tag in zip(tokens[1:], tags[1:]):
         if not token.startswith('▁'):
             token_past += token
@@ -185,17 +183,20 @@ def _decode_subtoken_tags(tokens, tags):
 
 
 def fetch_bio(sentences: List[str], bio_data: dict, **kwargs):
-    _fetch_key = "".join(sentences)
-    _fetch_key = preprocess_key_clean(_fetch_key)
-    _data = bio_data[_fetch_key]
-    if len(_data) == 0:
-        tokens_result = []
-        tags_result = []
-        for sent in sentences:
+    tokens_result = []
+    tags_result = []
+    for sent in sentences:
+        _fetch_key = "".join(sent)
+        _fetch_key = preprocess_key_clean(_fetch_key)
+        _fetched = bio_data[_fetch_key]
+        if len(_fetched) == 0:
             tokens, tags = _predict_failed_fetch(sent, **kwargs)
             tokens_result.append(tokens)
             tags_result.append(tags)
-        _data = {'tokens': tokens_result, 'tags': tags_result}
+        else:
+            tokens_result.append(_fetched['tokens'][0])
+            tags_result.append(_fetched['tags'][0])
+    _data = {'tokens': tokens_result, 'tags': tags_result}
     return _data
 
 
@@ -248,40 +249,42 @@ def analyze_data(dataset_input):
         tags = data['tags']
         sent_count += len(tags)
         for tags_instance in tags:
+            tags_instance = [ins.split('-')[1] for ins in tags_instance if '-' in ins]
             tags_instance_len = len(tags_instance)
+
             if tags_instance_len > max_length:
                 max_length = tags_instance_len
             flag = False
-            if 'B-trigger' in tags_instance:
+            if 'trigger' in tags_instance:
                 trigger_count += 1
                 flag = True
-            if 'B-participant' in tags_instance:
+            if 'participant' in tags_instance:
                 participant_count += 1
                 flag = True
-            if 'B-organizer' in tags_instance:
+            if 'organizer' in tags_instance:
                 organizer_count += 1
                 flag = True
-            if 'B-target' in tags_instance:
+            if 'target' in tags_instance:
                 target_count += 1
                 flag = True
             if flag is False:
                 no_tag_count += 1
     print(f"Sentences' max length: {max_length}")
     print("The ratio of sentences having ...")
-    print(f"B-trigger: \t {trigger_count/sent_count: 2.2%}")
-    print(f"B-participant: \t {participant_count/sent_count: 2.2%}")
-    print(f"B-organizer: \t {organizer_count/sent_count: 2.2%}")
-    print(f"B-target: \t {target_count/sent_count: 2.2%}")
+    print(f"trigger: \t {trigger_count/sent_count: 2.2%}")
+    print(f"participant: \t {participant_count/sent_count: 2.2%}")
+    print(f"organizer: \t {organizer_count/sent_count: 2.2%}")
+    print(f"target: \t {target_count/sent_count: 2.2%}")
     print(f"Data without any tags above: \t {no_tag_count/sent_count: 2.2%}")
 
     """
-    Sentences' max length: 136
+    Sentences' max length: 154
     The ratio of sentences having ...
-    B-trigger: 	  93.57%
-    B-participant: 	  56.96%
-    B-organizer: 	  21.22%
-    B-target: 	  27.37%
-    Data without any tags above: 	  3.10%
+    trigger: 	  97.64%
+    participant: 	  56.84%
+    organizer: 	  22.78%
+    target: 	  29.10%
+    Data without any tags above: 	  1.20%
     """
 
 
