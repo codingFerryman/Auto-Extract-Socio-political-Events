@@ -7,7 +7,7 @@ numpy
 icecream
 stanza
 sentencepiece
-spacy[cu111]
+spacy[cu102]
 allennlp
 allennlp-models
 clean-text
